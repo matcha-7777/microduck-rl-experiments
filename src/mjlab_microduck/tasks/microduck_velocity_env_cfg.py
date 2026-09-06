@@ -311,7 +311,7 @@ def make_microduck_velocity_env_cfg(
 
     # foot_slip deliberately weak (-0.1, not -1.0): -1.0 was too restrictive
     # for this robot's pivot-heavy turning.
-    cfg.rewards["foot_slip"].weight = -0.1
+    cfg.rewards["foot_slip"].weight = -1.0
     cfg.rewards["foot_slip"].params["command_threshold"] = 0.01
 
     cfg.rewards.pop("soft_landing", None)
