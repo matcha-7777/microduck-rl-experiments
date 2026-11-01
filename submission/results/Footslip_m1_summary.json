@@ -1,0 +1,18 @@
+{
+  "FORWARD": {
+    "fall_flag_s": null,
+    "duration_s": 8.0
+  },
+  "RIGHT": {
+    "fall_flag_s": null,
+    "duration_s": 8.0
+  },
+  "LEFT": {
+    "fall_flag_s": null,
+    "duration_s": 8.0
+  },
+  "BACKWARD": {
+    "fall_flag_s": null,
+    "duration_s": 8.0
+  }
+}

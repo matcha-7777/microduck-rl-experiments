@@ -4,8 +4,7 @@ The main locomotion task: velocity-command tracking + head-pose commands.
 The reward/regularization recipe is locomotion-focused (lean tracking +
 gait/feet terms, curriculum-ramped action-rate smoothing), with:
 
-  - foot_slip kept at -0.1 (deliberately weak — stronger was too restrictive
-    for this robot's pivot-heavy turning)
+  - foot_slip set to -1.0 for the comparison experiment (baseline: -0.1)
   - fixed, modest command ranges (ang ±1.0 makes turning learnable) instead of
     a widening curriculum that outpaced the robot's capability
   - turn-in-place: 15% of envs get lin=0 + |ang| ∈ [0.4, 1.0] (2026-07 audit:
@@ -309,8 +308,7 @@ def make_microduck_velocity_env_cfg(
     # Body-specific configurations
     cfg.rewards["body_ang_vel"].params["asset_cfg"].body_names = ("trunk_base",)
 
-    # foot_slip deliberately weak (-0.1, not -1.0): -1.0 was too restrictive
-    # for this robot's pivot-heavy turning.
+    # Comparison experiment: increase the baseline weight from -0.1 to -1.0.
     cfg.rewards["foot_slip"].weight = -1.0
     cfg.rewards["foot_slip"].params["command_threshold"] = 0.01
 

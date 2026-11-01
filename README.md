@@ -1,5 +1,11 @@
 # Microduck RL
 
+## Physical AI 応用編1：足滑りペナルティの比較
+
+MicroDuckの歩行方策について、学習時の `foot_slip` 重みを変更し、前進・旋回・後退の指令に対する挙動を比較しました。実験条件、評価コード、学習済みモデル、結果、再現手順は [submission/README.md](submission/README.md) を参照してください。
+
+以下は元のMicroduck RLプロジェクトの説明です。
+
 <img width="2215" height="884" alt="image" src="https://github.com/user-attachments/assets/5db7cc83-b3ce-4f7c-83f0-0572a63baed7" />
 
 
